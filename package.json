@@ -1,0 +1,30 @@
+{
+  "name": "hirucyari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshness/hirucyari.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoshness/hirucyari/issues"
+  },
+  "homepage": "https://github.com/yoshness/hirucyari#readme",
+  "devDependencies": {
+    "laravel-mix": "^5.0.1",
+    "laravel-mix-ejs": "^1.1.3",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2"
+  },
+  "dependencies": {}
+}

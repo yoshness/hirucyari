@@ -1,0 +1,23 @@
+ //antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+$base-font-family: 'Roboto';
+$base-font-size: 15px;
+$base-font-color: #030510;
+$base-background-color: #fff;
+
+$site-size: 1200px + 60;
+
+// colors
+// $color-primary: #030510;
+
+// easing / animation
+$duration: .25s;
+$easing: ease-in-out;
+$delay: .35s;
+
+$path-assets: "/public";
+$path-image: "#{$path-assets}/images/";
