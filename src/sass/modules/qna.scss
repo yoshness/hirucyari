@@ -1,0 +1,102 @@
+.qna {
+    @include max-screen($breakpoint-mobile) {
+        text-align: center;
+    }
+}
+.qna__list {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 15px;
+
+        list-style-type: none;
+    }
+}
+.qna__item {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 30px;
+    }
+
+    &:first-of-type {
+        @include max-screen($breakpoint-mobile) {
+            margin-top: 45px;
+        }
+    }
+
+    &:nth-of-type(2) {
+        .qna__item-heading {
+            &:before {
+                @include max-screen($breakpoint-mobile) {
+                    left: 11px;
+                }
+            }
+            &:after {
+                @include max-screen($breakpoint-mobile) {
+                    left: 10px;
+                }
+            }
+        }
+    }
+
+    &:nth-of-type(3) {
+        .qna__item-heading {
+            &:before {
+                @include max-screen($breakpoint-mobile) {
+                    left: -3px;
+                }
+            }
+            &:after {
+                @include max-screen($breakpoint-mobile) {
+                    left: -5px;
+                }
+            }
+        }
+    }
+}
+.qna__item-heading {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 20px;
+
+        position: relative;
+
+        display: inline-block;
+    }
+
+    &:before {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: 9px;
+            left: -13px;
+
+            width: 8px;
+            height: 13px;
+
+            content: '';
+
+            background-color: $color-primary;
+        }
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: 0;
+            left: -15px;
+
+            width: 20px;
+            height: 19px;
+
+            content: '';
+
+            background-image: url('#{$path-image}writer.png');
+            background-size: cover;
+        }
+    }
+}
+.qna__item-description {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 15px;
+
+        margin-top: 15px;
+
+        text-align: left;
+    }
+}

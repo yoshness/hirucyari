@@ -2,11 +2,134 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 	<title>Hiru-Cyari</title>
 	<link rel="stylesheet" href="public/css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
-	<% var statement = 'Ready to Rumble!'; %>
-	<h1><%= statement %></h1>
+	<main class="l-index">
+		<div class="hero">
+			<div class="hero__overlay"></div>
+			<p class="hero__tagline">夜職を卒業したいなら断然、</p>
+			<h1 class="hero__title">昼キャリ!</h1>
+			<p class="hero__description">
+				営業・受付・事務 etc…<br>
+				様々な職種への転職相談所
+			</p>
+		</div>
+		<section class="l-index__qna">
+			<div class="l-container">
+				<div class="qna">
+					<h2 class="section-title">
+						<span>もうこんなことで</span>
+						<span>悩む必要はありません</span>
+					</h2>
+					<ul class="qna__list">
+						<li class="qna__item">
+							<h3 class="qna__item-heading">昼職で働いたことが<br>なくても大丈夫なのか</h3>
+							<p class="qna__item-description">自分が活躍できる職場・職種がないと諦めていませんか。初めは誰もが未経験です。<br> 昼キャリは経験の有無に関係なく、楽しく働けて、成長できる環境を持つ企業をご紹介します。</p>
+						</li>
+						<li class="qna__item">
+							<h3 class="qna__item-heading">彼氏や旦那に夜職を<br>辞めてほしいと言われている</h3>
+							<p class="qna__item-description">夜職を卒業できない、したくない理由は何でしょうか。昼キャリのエージェントに何でもご相談ください。</p>
+						</li>
+						<li class="qna__item">
+							<h3 class="qna__item-heading">このまま夜職を<br>続けると将来が不安</h3>
+							<p class="qna__item-description">売れる人にとって夜職が短期的に稼げる仕事であることは確かですが、一生できる仕事ではありません。</p>
+						</li>
+						<li class="qna__item">
+							<h3 class="qna__item-heading">そもそも転職の<br>仕方が分からない</h3>
+							<p class="qna__item-description">履歴書の書き方、面接で応対する方法などが分からないことは恥ずかしいことではありません。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="l-index__info">
+			<div class="l-container">
+				<div class="info">
+					<h2 class="section-title">
+						<span>昼キャリは</span>
+						<span>夜職経験者に特化!!</span>
+					</h2>
+					<p class="info__description">実績豊富なエージェントが転職相談から転職後のアフターフォローまで、<br> トータルサポートします</p>
+
+					<ul class="info__list">
+						<li class="info__item">
+							<div class="info__item-image"></div>
+							<h3 class="info__item-heading">安心・安全の求人紹介</h3>
+							<p class="info__item-description">厚生労働省より有料職業紹介の認可を得ています。実績のあるプロのエージェントが、あなたにあった転職先を紹介するサービスです。</p>
+						</li>
+						<li class="info__item">
+							<div class="info__item-image"></div>
+							<h3 class="info__item-heading">充実した転職サポート</h3>
+							<p class="info__item-description">提出書類の書き方講座や添削、面接対策、企業情報の提供など、充実したサポートを提供します。</p>
+						</li>
+						<li class="info__item">
+							<div class="info__item-image"></div>
+							<h3 class="info__item-heading">面倒な手間がかからない</h3>
+							<p class="info__item-description">必要書類の提出や給料等の条件交渉、入社日の決定などは全てお任せください。</p>
+						</li>
+					</ul>
+				</div>
+				<div class="staff">
+					<h2 class="section-title">
+						<span>スタッフ</span>
+					</h2>
+					<ul class="staff__list" id="js-staff-slides">
+						<li class="staff__item">
+							 <img class="staff__item-img" src="public/images/staff-1.png" alt="" width="175">
+							 <div class="staff__name">
+							 	<h3>1 名字 名前</h3>
+							 	<span>Nanae Myouji</span>
+							 </div>
+							 <p class="staff__description">
+							 	1 テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキ
+							 </p>
+						</li>
+						<li class="staff__item">
+							 <img class="staff__item-img" src="public/images/staff-1.png" alt="" width="175">
+							 <div class="staff__name">
+							 	<h3>2 名字 名前</h3>
+							 	<span>Nanae Myouji</span>
+							 </div>
+							 <p class="staff__description">
+							 	2 テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキ
+							 </p>
+						</li>
+						<li class="staff__item">
+							 <img class="staff__item-img" src="public/images/staff-1.png" alt="" width="175">
+							 <div class="staff__name">
+							 	<h3>3 名字 名前</h3>
+							 	<span>Nanae Myouji</span>
+							 </div>
+							 <p class="staff__description">
+							 	3 テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキ
+							 </p>
+						</li>
+					</ul>
+					<div class="staff__arrows">
+						<div class="staff__arrow staff__arrow--prev js-staff-arrow-prev"></div>
+						<div class="staff__arrow staff__arrow--next js-staff-arrow-next"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<aside class="l-index__contact contact">
+			<div class="l-container">
+				<p class="contact__description">昼キャリのエージェントへの相談は無料です。<br>どうぞお気軽にお問い合わせください。</p>
+				<a class="contact__button contact__button--phone" href="#">
+					<p>昼キャリ</p>
+					<p>03-1111-1111</p>
+				</a>
+				<a class="contact__button contact__button--line" href="#">
+					<p><span>LINE</span>で相談する</p>
+				</a>
+			</div>
+		</aside>
+	</main>
+	<script type="text/javascript" src="public/js/app.js"></script>
 </body>
 </html>

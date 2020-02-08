@@ -1,0 +1,59 @@
+.l-index__qna {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        padding: 120px 0 70px;
+    }
+
+    &:before {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            z-index: 1;
+            top: -95px;
+
+            width: 100%;
+            height: 159px;
+
+            content: '';
+
+            background-image: url('#{$path-image}hero-after.png');
+            background-size: cover;
+        }
+    }
+}
+
+.l-index__info {
+    @include max-screen($breakpoint-mobile) {
+        padding: 70px 0 100px;
+
+        background-image: url('#{$path-image}bg-1.jpg');
+        background-size: cover;
+    }
+}
+
+.l-index__contact {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        padding: 70px 0;
+    }
+
+    &:before {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            content: '';
+
+            background-image: url('#{$path-image}bg-2.png');
+            background-position: center center;
+            background-size: 200%;
+
+            filter: opacity(.15);
+        }
+    }
+}

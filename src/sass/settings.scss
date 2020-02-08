@@ -4,20 +4,43 @@ $font-smoothing: antialiased;
 //auto,optimizeSpeed,optimizeLegibility,geometricPrecision
 $text-rendering: auto;
 
-$base-font-family: 'Roboto';
-$base-font-size: 15px;
-$base-font-color: #030510;
+$base-font-family: 'Noto Sans JP', sans-serif;
+$base-font-size: 16px;
+$base-font-color: #222;
 $base-background-color: #fff;
 
 $site-size: 1200px + 60;
 
 // colors
-// $color-primary: #030510;
+$color-primary: #c1ab05;
 
 // easing / animation
 $duration: .25s;
 $easing: ease-in-out;
 $delay: .35s;
 
+//breakpoints
+$breakpoint-mobile: 767px;
+
 $path-assets: "/public";
 $path-image: "#{$path-assets}/images/";
+$path-font: "#{$path-assets}/fonts";
+
+$font-din-alt: 'DINAlternate-Bold';
+$font-851: '851MkPOP';
+
+@font-face {
+    font-family: 'DINAlternate-Bold';
+    src: url('#{$path-font}/DINAlternate-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/DINAlternate-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-font}/DINAlternate-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('#{$path-font}/DINAlternate-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: '851MkPOP';
+    src: url('#{$path-font}/851MkPOP.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$path-font}/851MkPOP.woff2') format('woff2'), /* Super Modern Browsers */
+    url('#{$path-font}/851MkPOP.woff') format('woff'), /* Pretty Modern Browsers */
+    url('#{$path-font}/851MkPOP.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

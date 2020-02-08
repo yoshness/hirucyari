@@ -1,0 +1,149 @@
+.contact__description {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 14px;
+
+        margin-bottom: 25px;
+
+        text-align: center;
+    }
+}
+
+.contact__button {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px 15px 5px;
+
+        text-align: center;
+
+        border-radius: 5px;
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: 45%;
+            right: 15px;
+
+            width: 10px;
+            height: 10px;
+
+            content: '';
+            transform: rotate(45deg);
+
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+        }
+    }
+
+    // MODIFIERS
+    &.contact__button--line {
+        @include max-screen($breakpoint-mobile) {
+            padding: 16px 0;
+
+            border: 1px solid #00b900;
+            background-color: #fff;
+        }
+
+        &:after {
+            @include max-screen($breakpoint-mobile) {
+                position: absolute;
+
+                border-color: #00b900;
+            }
+        }
+    }
+}
+
+.contact__button--phone {
+    @include max-screen($breakpoint-mobile) {
+        background: linear-gradient(to top, rgba(221,0,110,1) 0%, rgba(255,93,150,1) 100%);
+    }
+
+    p {
+        @include max-screen($breakpoint-mobile) {
+            color: #fff;
+        }
+        &:first-child {
+            @include max-screen($breakpoint-mobile) {
+                font-size: 14px;
+
+                margin-bottom: -5px;
+            }
+        }
+        &:nth-child(2) {
+            @include max-screen($breakpoint-mobile) {
+                font-family: $font-din-alt;
+                font-size: 30px;
+
+                position: relative;
+                left: 10px;
+
+                display: inline-block;
+            }
+
+            &:before {
+                @include max-screen($breakpoint-mobile) {
+                    position: absolute;
+                    top: 5px;
+                    left: -30px;
+
+                    display: block;
+
+                    width: 18px;
+                    height: 35px;
+
+                    content: '';
+
+                    background-image: url('#{$path-image}icon-phone.png');
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+.contact__button--line {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 24px;
+
+        color: #00b900;
+    }
+
+    p {
+        @include max-screen($breakpoint-mobile) {
+            position: relative;
+            left: 10px;
+
+            display: inline-block;
+        }
+
+        &:before {
+            @include max-screen($breakpoint-mobile) {
+                position: absolute;
+                top: 5px;
+                left: -50px;
+
+                display: block;
+
+                width: 36px;
+                height: 36px;
+
+                content: '';
+
+                background-image: url('#{$path-image}icon-line.png');
+                background-size: cover;
+            }
+        }
+    }
+
+    span {
+        @include max-screen($breakpoint-mobile) {
+            font-size: 28px;
+        }
+    }
+}

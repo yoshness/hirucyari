@@ -1,3 +1,64 @@
 .hero {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+        z-index: 2;
 
+        overflow-x: hidden;
+
+        height: 625px;
+
+        color: #fff;
+        background-image: url('#{$path-image}hero.jpg');
+        background-size: cover;
+
+        clip-path: polygon(0 0, 100% 0%, 100% 89.5%, 0% 100%);
+    }
+}
+
+.hero__overlay {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 625px;
+
+        background-color: rgba(78, 73, 77, .35);
+    }
+}
+
+.hero__tagline {
+    @include max-screen($breakpoint-mobile) {
+        font-family: $font-851;
+        font-size: 24px;
+
+        position: absolute;
+        top: 235px;
+        left: 105px;
+    }
+}
+
+.hero__title {
+    @include max-screen($breakpoint-mobile) {
+        font-family: $font-851;
+        font-size: 90px;
+
+        position: absolute;
+        top: 275px;
+        left: 50px;
+
+        transform: matrix(.99, -.16, .16, .99, 0, 0);
+    }
+}
+
+.hero__description {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: 420px;
+
+        width: 100%;
+
+        text-align: center;
+    }
 }
