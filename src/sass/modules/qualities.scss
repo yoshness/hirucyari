@@ -1,0 +1,156 @@
+.qualities {
+    @include max-screen($breakpoint-mobile) {
+        padding: 70px 0;
+
+        text-align: center;
+    }
+}
+
+.qualities__list {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 100px;
+
+        list-style-type: none;
+
+        counter-reset: quality;
+    }
+}
+
+.qualities__item {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        margin-bottom: 90px;
+    }
+
+    &:before {
+        @include max-screen($breakpoint-mobile) {
+            font-family: $font-din-alt;
+            font-size: 120px;
+
+            position: absolute;
+            z-index: 1;
+            top: -110px;
+            left: -5px;
+
+            content: '0' counter(quality);
+            counter-increment: quality;
+
+            color: $color-primary;
+            text-shadow: 3px 3px 0 #fff;
+        }
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: -40px;
+            left: -20px;
+
+            display: inline-block;
+
+            width: 0;
+            height: 0;
+
+            content: '';
+
+            opacity: .6;
+            border-width: 0 0 260px 95vw;
+            border-style: solid;
+            border-color: transparent transparent transparent #c0b283;
+        }
+    }
+
+    &:first-child {
+        .qualities__item-image {
+            @include max-screen($breakpoint-mobile) {
+                right: -20px;
+
+                background-image: url('#{$path-image}quality-1.png');
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        &:before {
+            @include max-screen($breakpoint-mobile) {
+                right: -5px;
+                left: auto;
+            }
+        }
+
+        &:after {
+            @include max-screen($breakpoint-mobile) {
+                right: -20px;
+                left: auto;
+
+                transform: scaleX(-1);
+            }
+        }
+
+        .qualities__item-image {
+            @include max-screen($breakpoint-mobile) {
+                left: -20px;
+
+                background-image: url('#{$path-image}quality-2.png');
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        .qualities__item-image {
+            @include max-screen($breakpoint-mobile) {
+                right: -20px;
+
+                background-image: url('#{$path-image}quality-3.png');
+            }
+        }
+    }
+}
+
+.qualities__item-image {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        width: 100%;
+        height: 250px;
+
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            content: '';
+
+            background-color: rgba(0, 0, 0, .4);
+        }
+    }
+}
+
+.qualities__item-heading {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 30px;
+
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+
+        width: 94%;
+
+        transform: translate(-50%, -50%);
+        text-align: left;
+        letter-spacing: .05em;
+
+        color: #fff;
+        text-shadow: 2px 2px 6px $color-primary;
+    }
+}

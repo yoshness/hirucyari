@@ -28,5 +28,12 @@
                 background-color: #fff229;
             }
         }
+
+        em {
+            @include max-screen($breakpoint-mobile) {
+                font-size: 40px;
+                font-style: normal;
+            }
+        }
     }
 }

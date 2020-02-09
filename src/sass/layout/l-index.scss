@@ -24,10 +24,31 @@
 
 .l-index__info {
     @include max-screen($breakpoint-mobile) {
-        padding: 70px 0 100px;
+        position: relative;
+
+        padding: 70px 0 50px;
 
         background-image: url('#{$path-image}bg-1.jpg');
         background-size: cover;
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            bottom: -49px;
+            left: 0;
+
+            display: inline-block;
+
+            width: 0;
+            height: 0;
+
+            content: '';
+
+            border-width: 0 0 50px 100vw;
+            border-style: solid;
+            border-color: transparent transparent transparent #ece5d5;
+        }
     }
 }
 
@@ -35,7 +56,7 @@
     @include max-screen($breakpoint-mobile) {
         position: relative;
 
-        padding: 70px 0;
+        padding: 80px 0 70px;
     }
 
     &:before {
