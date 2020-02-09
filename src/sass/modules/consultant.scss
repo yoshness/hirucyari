@@ -1,0 +1,55 @@
+.consultant {
+    @include max-screen($breakpoint-mobile) {
+        text-align: center;
+    }
+}
+
+.consultant__content {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 17px;
+
+        position: relative;
+
+        margin-top: 30px;
+        padding: 20px 20px 40px;
+
+        background-color: #dcd0c0;
+    }
+}
+
+.consultant__content-image {
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
+        height: 231px;
+
+        border-radius: 10px;
+
+        object-fit: none;
+    }
+}
+
+.consultant__content-name {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: 25px;
+        right: 35px;
+
+        height: 230px;
+
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+
+    span {
+        @include max-screen($breakpoint-mobile) {
+            position: relative;
+            top: -25px;
+        }
+    }
+}
+
+.consultant__content-description {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 25px;
+    }
+}

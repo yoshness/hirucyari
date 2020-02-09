@@ -1,0 +1,170 @@
+.steps {
+    @include max-screen($breakpoint-mobile) {
+        text-align: center;
+    }
+}
+
+.steps__phone {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        width: 79%;
+        height: 125vw;
+        margin: 40px auto;
+
+        text-align: left;
+
+        background-image: url('#{$path-image}phone-people.png');
+        background-position: center center;
+        background-size: cover;
+    }
+
+    p {
+        @include max-screen($breakpoint-mobile) {
+            font-size: 12px;
+
+            position: absolute;
+        }
+
+        &:first-child {
+            @include max-screen($breakpoint-mobile) {
+                top: 24vw;
+                left: 60px;
+            }
+        }
+        &:nth-child(2) {
+            @include max-screen($breakpoint-mobile) {
+                top: 42vw;
+                right: 25px;
+
+                width: 44%;
+            }
+        }
+        &:nth-child(3) {
+            @include max-screen($breakpoint-mobile) {
+                top: 71vw;
+                left: 51px;
+
+                width: 35%;
+            }
+        }
+        &:nth-child(4) {
+            @include max-screen($breakpoint-mobile) {
+                top: 91vw;
+                right: 25px;
+
+                width: 47%;
+            }
+        }
+    }
+}
+
+.steps__list {
+    @include max-screen($breakpoint-mobile) {
+        list-style-type: none;
+
+        counter-reset: step;
+    }
+}
+
+.steps__item {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 25px 15px 25px;
+
+        text-align: center;
+
+        background-color: #fff;
+    }
+
+    &:before {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: inline-block;
+
+            width: 0;
+            height: 0;
+
+            content: '';
+
+            border-width: 70px 130px 0 0;
+            border-style: solid;
+            border-color: $color-primary transparent transparent transparent;
+        }
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            font-size: 17px;
+
+            position: absolute;
+            top: 8px;
+            left: 8px;
+
+            content: 'STEP' counter(step);
+            counter-increment: step;
+
+            color: #fff;
+        }
+    }
+
+    &:nth-child(2) {
+        .steps__item-image {
+            @include max-screen($breakpoint-mobile) {
+                width: 55px;
+            }
+        }
+    }
+
+    &:last-of-type {
+        .steps__item-wrapper:after {
+            @include max-screen($breakpoint-mobile) {
+                display: none;
+            }
+        }
+    }
+}
+
+.steps__item-wrapper {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+    }
+
+    &:after {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            bottom: -52px;
+            left: 45%;
+
+            display: block;
+
+            width: 15px;
+            height: 15px;
+
+            content: '';
+            transform: rotate(135deg) translateX(-50%);
+
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+        }
+    }
+}
+
+.steps__item-image {
+    @include max-screen($breakpoint-mobile) {
+        width: 35px;
+        margin-bottom: 5px;
+    }
+}
+
+.steps__item-description {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 20px;
+    }
+}

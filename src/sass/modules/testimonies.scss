@@ -1,0 +1,92 @@
+.testimonies {
+    @include max-screen($breakpoint-mobile) {
+        text-align: center;
+    }
+}
+
+.testimonies__list {
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
+
+        list-style-type: none;
+    }
+}
+
+.testimonies__item {
+    @include max-screen($breakpoint-mobile) {
+        font-size: 18px;
+
+        position: relative;
+        left: 20px;
+
+        margin-bottom: 30px;
+        padding: 15px 30px 40px;
+
+        text-align: left;
+    }
+
+    &:before {
+        @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            z-index: 1;
+            top: 105px;
+            left: 0;
+
+            width: 100%;
+            height: 180px;
+
+            content: '';
+
+            background-image: url('#{$path-image}bg-4.png');
+            background-size: cover;
+        }
+    }
+}
+
+.testimonies__item-overlay {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: 105px;
+        left: 0;
+
+        width: 100%;
+        height: 180px;
+
+        background-color: rgba(205, 194, 156, .3);
+        background-size: cover;
+    }
+}
+
+.testimonies__item-image {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+        z-index: 2;
+        top: 10px;
+        left: -30px;
+
+        width: 73px;
+        height: 73px;
+    }
+}
+
+.testimonies__item-heading {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+        z-index: 1;
+        top: -25px;
+        left: 8px;
+
+        padding: 15px 45px;
+
+        color: #fff;
+        background-color: #373737;
+    }
+}
+
+.testimonies__item-description {
+    @include max-screen($breakpoint-mobile) {
+        position: relative;
+        z-index: 1;
+        top: 15px;
+    }
+}

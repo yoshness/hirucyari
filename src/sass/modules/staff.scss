@@ -22,7 +22,7 @@
     }
 }
 
-.staff__item-img {
+.staff__item-image {
     @include max-screen($breakpoint-mobile) {
         margin: 0 auto;
     }
