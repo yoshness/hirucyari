@@ -6,10 +6,18 @@ export default function staffSlider() {
 		arrows: false,
 		infinite: true,
 		speed: 1000,
-		// fade: true,
 		cssEase: 'cubic-bezier(.7, 0, .6, 1)',
-		// autoplay: true,
-  		// autoplaySpeed: 5000
+		slidesToShow: 3,
+    	slidesToScroll: 1,
+  		responsive: [
+	      	{
+		        breakpoint: 768,
+		        settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1,
+		    	}
+	    	}
+	    ]
 	});
 
 	$('.js-staff-arrow-prev').click((e) => {

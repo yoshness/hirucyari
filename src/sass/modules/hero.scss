@@ -1,61 +1,86 @@
 .hero {
+    position: relative;
+
+    height: 100vh;
+
+    color: #fff;
+    background-image: url('#{$path-image}hero-pc.jpg');
+    background-size: cover;
+
     @include max-screen($breakpoint-mobile) {
-        position: relative;
         z-index: 2;
 
         overflow-x: hidden;
 
         height: 625px;
 
-        color: #fff;
         background-image: url('#{$path-image}hero.jpg');
-        background-size: cover;
 
         clip-path: polygon(0 0, 100% 0%, 100% 89.5%, 0% 100%);
     }
 }
 
 .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(78, 73, 77, .35);
+
     @include max-screen($breakpoint-mobile) {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
         height: 625px;
-
-        background-color: rgba(78, 73, 77, .35);
     }
 }
 
 .hero__tagline {
+    font-family: $font-851;
+    font-size: 48px;
+
+    position: absolute;
+    top: 20%;
+    left: 3%;
+
     @include max-screen($breakpoint-mobile) {
-        font-family: $font-851;
         font-size: 24px;
 
-        position: absolute;
         top: 235px;
         left: 105px;
     }
 }
 
 .hero__title {
+    font-family: $font-851;
+    font-size: 120px;
+
+    position: absolute;
+    top: 36%;
+    left: 5%;
+
+    transform: matrix(.99, -.16, .16, .99, 0, 0);
+
     @include max-screen($breakpoint-mobile) {
-        font-family: $font-851;
         font-size: 90px;
 
-        position: absolute;
         top: 275px;
         left: 50px;
-
-        transform: matrix(.99, -.16, .16, .99, 0, 0);
     }
 }
 
 .hero__description {
+    font-size: 25px;
+
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+
     @include max-screen($breakpoint-mobile) {
-        position: absolute;
+        font-size: initial;
+
         top: 420px;
+        left: auto;
 
         width: 100%;
 

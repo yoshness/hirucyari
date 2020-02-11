@@ -1,41 +1,49 @@
 .section-title {
+    font-size: 40px;
+
+    text-shadow: 1px 2px 1px #fff;
+
     @include max-screen($breakpoint-mobile) {
         font-size: 28px;
 
-        text-shadow: 1px 2px 1px #fff;
+        min-height: 175px;
+        margin: 0 -20px -60px;
+        padding: 40px 0 0;
+
+        background-image: url('#{$path-image}heading-bg.png');
+        background-repeat: no-repeat;
+        background-size: 363px 172px;
     }
 
     span {
-        @include max-screen($breakpoint-mobile) {
-            position: relative;
-            z-index: 1;
+        position: relative;
+        z-index: 1;
 
-            display: inline-block;
-        }
+        display: inline-block;
 
         &:before {
-            @include max-screen($breakpoint-mobile) {
-                position: absolute;
-                z-index: -1;
-                bottom: 3px;
-                left: -5px;
+            // @include max-screen($breakpoint-mobile) {
+            position: absolute;
+            z-index: -1;
+            bottom: 3px;
+            left: -5px;
 
-                display: block;
+            display: block;
 
-                width: 103%;
-                height: 10px;
+            width: 103%;
+            height: 10px;
 
-                content: '';
+            content: '';
 
-                background-color: #fff229;
-            }
+            background-color: #fff229;
+            // }
         }
 
         em {
-            @include max-screen($breakpoint-mobile) {
-                font-size: 40px;
-                font-style: normal;
-            }
+            // @include max-screen($breakpoint-mobile) {
+            font-size: 40px;
+            font-style: normal;
+            // }
         }
     }
 }

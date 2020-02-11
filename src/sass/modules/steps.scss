@@ -1,123 +1,181 @@
 .steps {
+    display: flex;
+
+    padding: 0 70px;
+
+    text-align: center;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     @include max-screen($breakpoint-mobile) {
-        text-align: center;
+        display: block;
+
+        padding: 0;
+    }
+
+    .section-title {
+        width: 100%;
+
+        @include max-screen($breakpoint-mobile) {
+            width: auto;
+        }
     }
 }
 
 .steps__phone {
-    @include max-screen($breakpoint-mobile) {
-        position: relative;
+    position: relative;
 
+    width: 28.5%;
+    height: 530px;
+    margin: 45px 0 0 0;
+
+    text-align: left;
+
+    background-image: url('#{$path-image}phone-people.png');
+    background-position: center center;
+    background-size: cover;
+
+    @include max-screen($breakpoint-mobile) {
         width: 79%;
         height: 125vw;
-        margin: 40px auto;
-
-        text-align: left;
-
-        background-image: url('#{$path-image}phone-people.png');
-        background-position: center center;
-        background-size: cover;
+        margin: 50px auto 40px;
     }
 
     p {
+        font-size: 13px;
+
+        position: absolute;
+
         @include max-screen($breakpoint-mobile) {
             font-size: 12px;
-
-            position: absolute;
         }
 
         &:first-child {
+            top: 101px;
+            left: 60px;
+
             @include max-screen($breakpoint-mobile) {
                 top: 24vw;
-                left: 60px;
             }
         }
         &:nth-child(2) {
+            top: 181px;
+            right: 32px;
+
+            width: 44%;
+
             @include max-screen($breakpoint-mobile) {
                 top: 42vw;
                 right: 25px;
-
-                width: 44%;
             }
         }
         &:nth-child(3) {
+            top: 302px;
+            left: 60px;
+
+            width: 35%;
+
             @include max-screen($breakpoint-mobile) {
                 top: 71vw;
                 left: 51px;
-
-                width: 35%;
             }
         }
         &:nth-child(4) {
+            top: 386px;
+            right: 25px;
+
+            width: 47%;
+
             @include max-screen($breakpoint-mobile) {
                 top: 91vw;
-                right: 25px;
-
-                width: 47%;
             }
         }
     }
 }
 
 .steps__list {
-    @include max-screen($breakpoint-mobile) {
-        list-style-type: none;
+    display: flex;
 
-        counter-reset: step;
+    width: 65%;
+    margin-top: 90px;
+
+    list-style-type: none;
+
+    counter-reset: step;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    @include max-screen($breakpoint-mobile) {
+        display: block;
+
+        width: auto;
+        margin-top: 0;
     }
 }
 
 .steps__item {
-    @include max-screen($breakpoint-mobile) {
-        position: relative;
+    position: relative;
 
+    width: 47.5%;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: #fff;
+
+    @include max-screen($breakpoint-mobile) {
         width: 100%;
         margin-bottom: 40px;
         padding: 25px 15px 25px;
-
-        text-align: center;
-
-        background-color: #fff;
     }
 
     &:before {
-        @include max-screen($breakpoint-mobile) {
-            position: absolute;
-            top: 0;
-            left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
 
-            display: inline-block;
+        display: inline-block;
 
-            width: 0;
-            height: 0;
+        width: 0;
+        height: 0;
 
-            content: '';
+        content: '';
 
-            border-width: 70px 130px 0 0;
-            border-style: solid;
-            border-color: $color-primary transparent transparent transparent;
-        }
+        border-width: 70px 130px 0 0;
+        border-style: solid;
+        border-color: $color-primary transparent transparent transparent;
     }
 
     &:after {
-        @include max-screen($breakpoint-mobile) {
-            font-size: 17px;
+        font-size: 17px;
 
-            position: absolute;
-            top: 8px;
-            left: 8px;
+        position: absolute;
+        top: 8px;
+        left: 8px;
 
-            content: 'STEP' counter(step);
-            counter-increment: step;
+        content: 'STEP' counter(step);
+        counter-increment: step;
 
-            color: #fff;
-        }
+        color: #fff;
     }
 
     &:nth-child(2) {
         .steps__item-image {
             @include max-screen($breakpoint-mobile) {
                 width: 55px;
+            }
+        }
+    }
+
+    &:nth-of-type(even) {
+        .steps__item-wrapper:after {
+            display: none;
+
+            @include max-screen($breakpoint-mobile) {
+                display: block;
             }
         }
     }
@@ -132,38 +190,43 @@
 }
 
 .steps__item-wrapper {
-    @include max-screen($breakpoint-mobile) {
-        position: relative;
-    }
+    position: relative;
 
     &:after {
+        position: absolute;
+        top: 50%;
+        right: -41px;
+
+        display: block;
+
+        width: 15px;
+        height: 15px;
+
+        content: '';
+        transform: rotate(45deg) translateX(-50%);
+
+        border-top: 3px solid #fff;
+        border-right: 3px solid #fff;
+
         @include max-screen($breakpoint-mobile) {
-            position: absolute;
+            top: auto;
+            right: auto;
             bottom: -52px;
             left: 45%;
 
-            display: block;
-
-            width: 15px;
-            height: 15px;
-
-            content: '';
             transform: rotate(135deg) translateX(-50%);
-
-            border-top: 3px solid #fff;
-            border-right: 3px solid #fff;
         }
     }
 }
 
 .steps__item-image {
-    @include max-screen($breakpoint-mobile) {
-        width: 35px;
-        margin-bottom: 5px;
-    }
+    width: 35px;
+    margin-bottom: 5px;
 }
 
 .steps__item-description {
+    font-size: 18px;
+
     @include max-screen($breakpoint-mobile) {
         font-size: 20px;
     }

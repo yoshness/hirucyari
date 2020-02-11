@@ -1,112 +1,115 @@
 .staff {
-    @include max-screen($breakpoint-mobile) {
-        position: relative;
+    position: relative;
 
-        text-align: center;
+    margin-top: 30px;
+
+    text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 0;
     }
 }
 
 .staff__list {
-    @include max-screen($breakpoint-mobile) {
-        margin-top: 40px;
+    margin-top: 40px;
 
-        list-style-type: none;
+    list-style-type: none;
+
+    @include max-screen($breakpoint-mobile) {
+        margin-top: 10px;
     }
 }
 
 .staff__item {
-    @include max-screen($breakpoint-mobile) {
-        position: relative;
+    position: relative;
 
+    @include max-screen($breakpoint-mobile) {
         padding: 0 45px;
     }
 }
 
 .staff__item-image {
-    @include max-screen($breakpoint-mobile) {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 }
 
 .staff__name {
-    @include max-screen($breakpoint-mobile) {
-        position: absolute;
-        top: 175px;
-        right: 45px;
+    position: absolute;
+    top: 175px;
+    right: 45px;
 
-        padding: 6px 15px;
+    padding: 6px 15px;
 
-        transform: skew(-10deg);
-        text-align: center;
+    transform: skew(-10deg);
+    text-align: center;
 
-        background-color: #c0b283;
-    }
+    background-color: #c0b283;
+
     h3 {
-        @include max-screen($breakpoint-mobile) {
-            font-size: 28px;
+        font-size: 28px;
 
-            margin-bottom: -3px;
-        }
+        margin-bottom: -3px;
     }
     span {
+        font-size: 12px;
+
+        display: block;
+
         @include max-screen($breakpoint-mobile) {
             font-size: 10px;
-
-            display: block;
         }
     }
 
     h3,
     span {
-        @include max-screen($breakpoint-mobile) {
-            transform: skew(10deg);
-        }
+        transform: skew(10deg);
     }
 }
 
 .staff__description {
-    @include max-screen($breakpoint-mobile) {
-        margin-top: 40px;
+    margin-top: 40px;
+    padding: 0 45px;
 
-        text-align: left;
+    text-align: left;
+
+    @include max-screen($breakpoint-mobile) {
+        padding: 0;
     }
 }
 
 .staff__arrows {
-    @include max-screen($breakpoint-mobile) {
-        position: absolute;
-        top: 50%;
+    position: absolute;
+    top: 50%;
 
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .staff__arrow {
-    @include max-screen($breakpoint-mobile) {
-        position: absolute;
+    position: absolute;
 
-        display: block;
+    display: block;
 
-        width: 15px;
-        height: 15px;
+    width: 15px;
+    height: 15px;
 
-        border-top: 3px solid $color-primary;
-        border-left: 3px solid $color-primary;
+    cursor: pointer;
+    transition: opacity $duration $easing;
+
+    border-top: 3px solid $color-primary;
+    border-left: 3px solid $color-primary;
+
+    &:hover {
+        opacity: .7;
     }
 
     // MODIFIERS
     &.staff__arrow--prev {
-        @include max-screen($breakpoint-mobile) {
-            left: 10px;
+        left: 10px;
 
-            transform: rotate(-45deg);
-        }
+        transform: rotate(-45deg);
     }
     &.staff__arrow--next {
-        @include max-screen($breakpoint-mobile) {
-            right: 10px;
+        right: 10px;
 
-            transform: rotate(135deg);
-        }
+        transform: rotate(135deg);
     }
 }

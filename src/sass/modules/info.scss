@@ -1,29 +1,35 @@
 .info {
-    @include max-screen($breakpoint-mobile) {
-        text-align: center;
-    }
+    text-align: center;
 }
 
 .info__description {
-    @include max-screen($breakpoint-mobile) {
-        margin-top: 25px;
-    }
+    margin-top: 25px;
 }
 
 .info__list {
+    display: flex;
+
+    margin-top: 30px;
+
+    list-style-type: none;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
     @include max-screen($breakpoint-mobile) {
+        display: block;
         overflow: hidden;
 
         margin: 0 -20px;
-
-        list-style-type: none;
     }
 }
 
 .info__item {
-    @include max-screen($breakpoint-mobile) {
-        position: relative;
+    position: relative;
 
+    width: 30%;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 100%;
         margin-bottom: 150px;
     }
 
@@ -49,6 +55,8 @@
         }
 
         .info__item-image {
+            background-image: url('#{$path-image}info-1-pc.jpg');
+
             @include max-screen($breakpoint-mobile) {
                 background-image: url('#{$path-image}info-1.png');
             }
@@ -70,6 +78,8 @@
         }
 
         .info__item-image {
+            background-image: url('#{$path-image}info-2-pc.jpg');
+
             @include max-screen($breakpoint-mobile) {
                 background-image: url('#{$path-image}info-2.png');
             }
@@ -97,6 +107,8 @@
         }
 
         .info__item-image {
+            background-image: url('#{$path-image}info-3-pc.jpg');
+
             @include max-screen($breakpoint-mobile) {
                 background-image: url('#{$path-image}info-3.png');
             }
@@ -112,25 +124,33 @@
 }
 
 .info__item-image {
+    position: relative;
+
+    height: 240px;
+
+    background-size: cover;
+
     @include max-screen($breakpoint-mobile) {
-        position: relative;
-
         height: 287px;
-
-        background-size: cover;
     }
 }
 
 .info__item-heading {
+    font-size: 24px;
+
+    margin-top: 15px;
+
+    text-align: left;
+
+    color: $color-primary;
+    text-shadow: 1px 2px 2px #fff;
+
     @include max-screen($breakpoint-mobile) {
         font-size: 25px;
 
         position: absolute;
         top: 245px;
         left: 18%;
-
-        color: $color-primary;
-        text-shadow: 1px 2px 2px #fff;
     }
 
     &:first-letter {
@@ -141,6 +161,14 @@
 }
 
 .info__item-description {
+    font-size: 16px;
+
+    position: relative;
+
+    margin-top: 5px;
+
+    text-align: left;
+
     @include max-screen($breakpoint-mobile) {
         font-size: 14px;
 
@@ -149,7 +177,5 @@
         left: 23%;
 
         width: 65%;
-
-        text-align: left;
     }
 }

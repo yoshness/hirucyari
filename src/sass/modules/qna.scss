@@ -1,24 +1,30 @@
 .qna {
-    @include max-screen($breakpoint-mobile) {
-        text-align: center;
-    }
+    text-align: center;
 }
 .qna__list {
+    padding-left: 60px;
+
+    list-style-type: none;
+
     @include max-screen($breakpoint-mobile) {
         margin-top: 15px;
-
-        list-style-type: none;
+        padding-left: 0;
     }
 }
 .qna__item {
+    display: flex;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     @include max-screen($breakpoint-mobile) {
-        margin-top: 30px;
+        display: block;
     }
 
     &:first-of-type {
-        @include max-screen($breakpoint-mobile) {
-            margin-top: 45px;
-        }
+        margin-top: 45px;
     }
 
     &:nth-of-type(2) {
@@ -52,51 +58,70 @@
     }
 }
 .qna__item-heading {
+    font-size: 21px;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 24%;
+
+    text-align: left;
+
     @include max-screen($breakpoint-mobile) {
         font-size: 20px;
 
-        position: relative;
+        width: auto;
 
-        display: inline-block;
+        text-align: center;
     }
 
     &:before {
+        position: absolute;
+        top: 9px;
+        left: -20px;
+
+        width: 8px;
+        height: 13px;
+
+        content: '';
+
+        background-color: $color-primary;
+
         @include max-screen($breakpoint-mobile) {
-            position: absolute;
-            top: 9px;
             left: -13px;
-
-            width: 8px;
-            height: 13px;
-
-            content: '';
-
-            background-color: $color-primary;
         }
     }
 
     &:after {
+        position: absolute;
+        top: 0;
+        left: -22px;
+
+        width: 20px;
+        height: 19px;
+
+        content: '';
+
+        background-image: url('#{$path-image}writer.png');
+        background-size: cover;
+
         @include max-screen($breakpoint-mobile) {
-            position: absolute;
-            top: 0;
             left: -15px;
-
-            width: 20px;
-            height: 19px;
-
-            content: '';
-
-            background-image: url('#{$path-image}writer.png');
-            background-size: cover;
         }
     }
 }
 .qna__item-description {
+    font-size: 16px;
+
+    width: 73%;
+
+    text-align: left;
+
     @include max-screen($breakpoint-mobile) {
         font-size: 15px;
 
+        width: 100%;
         margin-top: 15px;
-
-        text-align: left;
     }
 }
