@@ -4,6 +4,10 @@
 
 .info__description {
     margin-top: 25px;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 101%;
+    }
 }
 
 .info__list {

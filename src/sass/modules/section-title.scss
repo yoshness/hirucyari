@@ -15,35 +15,65 @@
         background-size: 363px 172px;
     }
 
+    // STATE
+    &.is-shown {
+        span {
+            width: auto;
+
+            p {
+                transform: translateX(0);
+
+                opacity: 1;
+            }
+
+            &:after {
+                animation: drawFromRight 1.5s forwards;
+            }
+        }
+    }
+
     span {
         position: relative;
         z-index: 1;
 
         display: inline-block;
 
-        &:before {
-            // @include max-screen($breakpoint-mobile) {
+        width: 0;
+
+        &:after {
             position: absolute;
             z-index: -1;
+            right: -5px;
             bottom: 3px;
-            left: -5px;
 
             display: block;
 
-            width: 103%;
+            width: 0;
             height: 10px;
 
             content: '';
+            transition: width $duration $easing;
 
             background-color: #fff229;
-            // }
+        }
+
+        p {
+            transition: opacity 1s $easing 1.25s,
+            transform 1s $easing 1.25s;
+            transform: translateX(150px);
+
+            opacity: 0;
         }
 
         em {
-            // @include max-screen($breakpoint-mobile) {
             font-size: 40px;
             font-style: normal;
-            // }
         }
+    }
+}
+
+@keyframes drawFromRight {
+    100% {
+        width: 103%;
     }
 }

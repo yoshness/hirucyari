@@ -9,38 +9,76 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
+	<header class="header">
+		<div class="header__hamburger" id="js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<nav class="header__menu" id="js-menu">
+			<ul class="header__menu-list">
+				<li class="header__menu-item">
+					<a href="#">LINK 1</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="#">LINK 2</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="#">LINK 3</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="#">LINK 4</a>
+				</li>
+			</ul>
+			<div class="header__menu-buttons">
+				<a class="contact__button contact__button--phone" href="#">
+					<p>昼キャリ</p>
+					<p>03-1111-1111</p>
+				</a>
+				<a class="contact__button contact__button--line" href="#">
+					<p><span>LINE</span>で相談する</p>
+				</a>
+			</div>
+		</nav>
+	</header>
 	<main class="l-index">
-		<div class="hero">
+		<div class="hero" id="js-hero">
 			<div class="hero__overlay"></div>
-			<p class="hero__tagline">夜職を卒業したいなら断然、</p>
-			<h1 class="hero__title">昼キャリ!</h1>
-			<p class="hero__description">
+			<p class="hero__tagline" id="js-hero-tagline">夜職を卒業したいなら断然、</p>
+			<h1 class="hero__title" id="js-hero-title">昼キャリ!</h1>
+			<p class="hero__description" id="js-hero-description">
 				営業・受付・事務 etc…<br>
 				様々な職種への転職相談所
 			</p>
 		</div>
-		<section class="l-index__qna js-fadein">
+		<section class="l-index__qna">
 			<div class="l-container">
-				<div class="qna">
-	<h2 class="section-title">
-		<span>もうこんなことで</span>
-		<span>悩む必要はありません</span>
+				<div class="qna js-fadein">
+	<h2 class="section-title js-draw-from-right">
+		<div class="u-show-pc">
+			<span><p>もうこんなことで悩む必要はありません</p></span>
+		</div>
+		<div class="u-show-sp">
+			<span><p>もうこんなことで</p></span>
+			<span><p>悩む必要はありません</p></span>
+		</div>
 	</h2>
 	<ul class="qna__list">
 		<li class="qna__item">
-			<h3 class="qna__item-heading">昼職で働いたことが<br>なくても大丈夫なのか</h3>
+			<h3 class="qna__item-heading js-draw-from-right"><span><p>昼職で働いたことが</p></span><span><p>なくても大丈夫なのか</p></span></h3>
 			<p class="qna__item-description">自分が活躍できる職場・職種がないと諦めていませんか。初めは誰もが未経験です。<br> 昼キャリは経験の有無に関係なく、楽しく働けて、成長できる環境を持つ企業をご紹介します。</p>
 		</li>
 		<li class="qna__item">
-			<h3 class="qna__item-heading">彼氏や旦那に夜職を<br>辞めてほしいと言われている</h3>
+			<h3 class="qna__item-heading js-draw-from-right"><span><p>彼氏や旦那に夜職を</p></span><span><p>辞めてほしいと言われている</p></span></h3>
 			<p class="qna__item-description">夜職を卒業できない、したくない理由は何でしょうか。昼キャリのエージェントに何でもご相談ください。</p>
 		</li>
 		<li class="qna__item">
-			<h3 class="qna__item-heading">このまま夜職を<br>続けると将来が不安</h3>
+			<h3 class="qna__item-heading js-draw-from-right"><span><p>このまま夜職を</p></span><span><p>続けると将来が不安</p></span></h3>
 			<p class="qna__item-description">売れる人にとって夜職が短期的に稼げる仕事であることは確かですが、一生できる仕事ではありません。</p>
 		</li>
 		<li class="qna__item">
-			<h3 class="qna__item-heading">そもそも転職の<br>仕方が分からない</h3>
+			<h3 class="qna__item-heading js-draw-from-right"><span><p>そもそも転職の</p></span><span><p>仕方が分からない</p></span></h3>
 			<p class="qna__item-description">履歴書の書き方、面接で応対する方法などが分からないことは恥ずかしいことではありません。</p>
 		</li>
 	</ul>
@@ -50,11 +88,16 @@
 		<section class="l-index__info">
 			<div class="l-container">
 				<div class="info js-fadein">
-	<h2 class="section-title">
-		<span>昼キャリは</span>
-		<span>夜職経験者に特化!!</span>
+	<h2 class="section-title js-draw-from-right">
+		<div class="u-show-pc">
+			<span><p>昼キャリは夜職経験者に特化!!</p></span>
+		</div>
+		<div class="u-show-sp">
+			<span><p>昼キャリは</p></span>
+			<span><p>夜職経験者に特化!!</p></span>
+		</div>
 	</h2>
-	<p class="info__description">実績豊富なエージェントが転職相談から転職<br>後のアフターフォローまで、<br> トータルサポートします</p>
+	<p class="info__description">実績豊富なエージェントが転職相談から転職後<br class="u-show-sp">のアフターフォローまで、<br class="u-show-sp">トータルサポートします</p>
 
 	<ul class="info__list">
 		<li class="info__item js-fadein">
@@ -75,8 +118,8 @@
 	</ul>
 </div>
 				<div class="staff js-fadein">
-	<h2 class="section-title">
-		<span>スタッフ</span>
+	<h2 class="section-title js-draw-from-right">
+		<span><p>スタッフ</p></span>
 	</h2>
 	<ul class="staff__list" id="js-staff-slides">
 		<li class="staff__item">
@@ -144,11 +187,17 @@
 		<section class="l-index__qualities js-fadein">
 			<div class="l-container">
 				<div class="qualities">
-	<h2 class="section-title">
-		<span>夜職経験を昼職で</span>
-		<span>活かしましょう！</span><br>
-		<span>あなたが評価される、</span>
-		<span>その<em>3</em>つの理由</span>
+	<h2 class="section-title js-draw-from-right">
+		<div class="u-show-pc">
+			<span><p>夜職経験を昼職で活かしましょう！</p></span>
+			<span><p>あなたが評価される、その<em>3</em>つの理由</p></span>
+		</div>
+		<div class="u-show-sp">
+			<span><p>夜職経験を昼職で</p></span>
+			<span><p>活かしましょう！</p></span>
+			<span><p>あなたが評価される、</p></span>
+			<span><p>その<em>3</em>つの理由</p></span>
+		</div>
 	</h2>
 	<ul class="qualities__list">
 		<li class="qualities__item js-fadein">
@@ -167,12 +216,17 @@
 </div>
 			</div>
 		</section>
-		<section class="l-index__consultant js-fadein">
+		<section class="l-index__consultant">
 			<div class="l-container">
-				<div class="consultant">
-	<h2 class="section-title">
-		<span>キャリアコンサルタント</span>
-		<span>◯◯氏推薦</span>
+				<div class="consultant js-fadein">
+	<h2 class="section-title js-draw-from-right">
+		<div class="u-show-pc">
+			<span><p>キャリアコンサルタント◯◯氏推薦</p></span>
+		</div>
+		<div class="u-show-sp">
+			<span><p>キャリアコンサルタント</p></span>
+			<span><p>◯◯氏推薦</p></span>
+		</div>
 	</h2>
 	<div class="consultant__content">
 		<img class="consultant__content-image js-fadein" src="public/images/consultant.jpg" alt="">
@@ -190,9 +244,14 @@
 			<div class="l-index__steps-overlay"></div>
 			<div class="l-container">
 				<div class="steps js-fadein">
-	<h2 class="section-title">
-		<span>簡単ライン登録で</span>
-		<span>即日スカウト!?</span>
+	<h2 class="section-title js-draw-from-right">
+		<div class="u-show-pc">
+			<span><p>簡単ライン登録で即日スカウト!?</p></span>
+		</div>
+		<div class="u-show-sp">
+			<span><p>簡単ライン登録で</p></span>
+			<span><p>即日スカウト!?</p></span>
+		</div>
 	</h2>
 	<div class="steps__phone js-fadein">
 		<p>昼職を探す</p>
@@ -244,8 +303,8 @@
 		<section class="l-index__testimonies">
 			<div class="l-container">
 				<div class="testimonies js-fadein">
-	<h2 class="section-title">
-		<span>夜職卒業生の声</span>
+	<h2 class="section-title js-draw-from-right">
+		<span><p>夜職卒業生の声</p></span>
 	</h2>
 	<ul class="testimonies__list">
 		<li class="testimonies__item js-fadein">

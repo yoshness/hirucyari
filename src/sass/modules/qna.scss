@@ -14,13 +14,15 @@
 .qna__item {
     display: flex;
 
-    margin-top: 30px;
+    margin-top: 50px;
 
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     @include max-screen($breakpoint-mobile) {
         display: block;
+
+        margin-top: 30px;
     }
 
     &:first-of-type {
@@ -76,38 +78,57 @@
         text-align: center;
     }
 
-    &:before {
-        position: absolute;
-        top: 9px;
-        left: -20px;
+    // STATE
+    &.is-shown {
+        span {
+            width: auto;
 
-        width: 8px;
-        height: 13px;
+            p {
+                transform: translateX(0);
 
-        content: '';
+                opacity: 1;
+            }
 
-        background-color: $color-primary;
-
-        @include max-screen($breakpoint-mobile) {
-            left: -13px;
+            &:after {
+                animation: drawFromRight 1.5s forwards;
+            }
         }
     }
 
-    &:after {
-        position: absolute;
-        top: 0;
-        left: -22px;
+    span {
+        position: relative;
 
-        width: 20px;
-        height: 19px;
+        display: inline-block;
 
-        content: '';
-
-        background-image: url('#{$path-image}writer.png');
-        background-size: cover;
+        width: 0;
+        margin-bottom: 7px;
 
         @include max-screen($breakpoint-mobile) {
-            left: -15px;
+            margin-bottom: 0;
+        }
+
+        &:after {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 0;
+
+            display: block;
+
+            width: 0;
+            height: 10px;
+
+            content: '';
+
+            background-color: #fff229;
+        }
+
+        p {
+            transition: opacity 1s $easing 1.25s,
+            transform 1s $easing 1.25s;
+            transform: translateX(150px);
+
+            opacity: 0;
         }
     }
 }

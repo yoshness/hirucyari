@@ -9,17 +9,50 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
+	<header class="header">
+		<div class="header__hamburger" id="js-toggle-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<nav class="header__menu" id="js-menu">
+			<ul class="header__menu-list">
+				<li class="header__menu-item">
+					<a href="#">LINK 1</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="#">LINK 2</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="#">LINK 3</a>
+				</li>
+				<li class="header__menu-item">
+					<a href="#">LINK 4</a>
+				</li>
+			</ul>
+			<div class="header__menu-buttons">
+				<a class="contact__button contact__button--phone" href="#">
+					<p>昼キャリ</p>
+					<p>03-1111-1111</p>
+				</a>
+				<a class="contact__button contact__button--line" href="#">
+					<p><span>LINE</span>で相談する</p>
+				</a>
+			</div>
+		</nav>
+	</header>
 	<main class="l-index">
-		<div class="hero">
+		<div class="hero" id="js-hero">
 			<div class="hero__overlay"></div>
-			<p class="hero__tagline">夜職を卒業したいなら断然、</p>
-			<h1 class="hero__title">昼キャリ!</h1>
-			<p class="hero__description">
+			<p class="hero__tagline" id="js-hero-tagline">夜職を卒業したいなら断然、</p>
+			<h1 class="hero__title" id="js-hero-title">昼キャリ!</h1>
+			<p class="hero__description" id="js-hero-description">
 				営業・受付・事務 etc…<br>
 				様々な職種への転職相談所
 			</p>
 		</div>
-		<section class="l-index__qna js-fadein">
+		<section class="l-index__qna">
 			<div class="l-container">
 				<%- include('partials/qna'); %>
 			</div>
@@ -40,7 +73,7 @@
 				<%- include('partials/qualities'); %>
 			</div>
 		</section>
-		<section class="l-index__consultant js-fadein">
+		<section class="l-index__consultant">
 			<div class="l-container">
 				<%- include('partials/consultant'); %>
 			</div>

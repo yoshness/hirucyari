@@ -1,0 +1,163 @@
+.header__hamburger {
+	width: 26px;
+	height: 24px;
+	position: fixed;
+	transform: rotate(0deg);
+	transition: .5s $easing;
+	cursor: pointer;
+	z-index: 20;
+	top: 25px;
+    right: 25px;
+
+	span {
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background-color: #fff;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: $duration $easing;
+
+		&:nth-child(1) {
+			top: 0px;
+		}
+
+		&:nth-child(2), &:nth-child(3) {
+			top: 9px;
+		}
+
+		&:nth-child(4) {
+			top: 18px;
+		}
+	}
+
+	// STATE
+	&.is-open {
+		span {
+			&:nth-child(1) {
+				top: 9px;
+				width: 0%;
+				left: 50%;
+			}
+
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(4) {
+				top: 9px;
+				width: 0%;
+				left: 50%;
+			}
+		}
+	}
+}
+
+.header__menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	background-color: #bbae80;
+	display: flex;
+	width: 25%;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 150px 20px;
+	height: 100%;
+
+	transition: opacity $duration $easing;
+
+	// STATE
+	&.is-shown {
+		opacity: 1;
+		z-index: 15;
+	}
+
+	@include max-screen($breakpoint-mobile) {
+		width: 63%;
+	}
+}
+
+.header__menu-list {
+	list-style-type: none;
+	width: 100%;
+}
+
+.header__menu-item {
+	border-bottom: 2px solid #cec5a4;
+	
+	margin-bottom: 10px;
+	padding: 0 0 5px 10px;
+
+	a {
+		color: #fff;
+		display: block;
+
+		transition: opacity $duration $easing;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+}
+
+.header__menu-buttons {
+	margin-top: 80px;
+	width: 100%;
+
+	.contact__button {
+		width: 100%;
+		margin: 0 0 15px;
+
+		@include max-screen($breakpoint-mobile) {
+			margin-bottom: 10px;
+		}
+
+		&.contact__button--phone, &.contact__button--line {
+			p, span {
+				font-size: 14px;
+			}
+		}
+
+		&.contact__button--phone {
+			p {
+				&:nth-child(2) {
+					font-size: 18px;
+					&:before {
+						width: 10px;
+						height: 21px;
+						top: -5px;
+					}
+				}
+			}
+		}
+
+		&.contact__button--line {
+			padding: 10px 0;
+
+			p {
+				&:before {
+					width: 26px;
+					height: 26px;
+					top: -5px;
+					left: -40px;
+				}
+			}
+		}
+
+		&:after {
+			width: 7px;
+			height: 7px;
+			border-top-width: 2px;
+			border-right-width: 2px;
+		}
+	}
+}

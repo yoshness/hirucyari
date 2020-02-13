@@ -157,7 +157,7 @@
     top: 50%;
     left: 50%;
 
-    width: 94%;
+    width: 88%;
 
     transform: translate(-50%, -50%);
     text-align: left;
@@ -165,4 +165,8 @@
 
     color: #fff;
     text-shadow: 2px 2px 6px $color-primary;
+
+    @include max-screen($breakpoint-mobile) {
+        width: 94%;
+    }
 }
