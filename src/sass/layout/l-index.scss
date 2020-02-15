@@ -89,6 +89,17 @@
             background-size: 200%;
         }
     }
+
+    // MODIFIER
+    &.l-index__contact--bottom {
+        z-index: 2;
+
+        margin-bottom: -90px;
+
+        @include max-screen($breakpoint-mobile) {
+            margin-bottom: -50px;
+        }
+    }
 }
 
 .l-index__qualities {

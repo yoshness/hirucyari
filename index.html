@@ -8,40 +8,41 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="js-top">
 	<header class="header">
-		<div class="header__hamburger" id="js-toggle-menu">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
+	<div class="header__hamburger" id="js-toggle-menu">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav class="header__menu" id="js-menu">
+		<ul class="header__menu-list">
+			<li class="header__menu-item">
+				<a class="js-scroll" href="#js-top">ホーム</a>
+			</li>
+			<li class="header__menu-item">
+				<a class="js-scroll" href="#js-info-section">昼キャリについて</a>
+			</li>
+			<li class="header__menu-item">
+				<a class="js-scroll" href="#js-staff-section">スタッフ</a>
+			</li>
+			<li class="header__menu-item">
+				<a class="js-scroll" href="#js-testimonies-section">夜職卒業生の声</a>
+			</li>
+		</ul>
+		<div class="header__menu-buttons">
+			<a class="contact__button contact__button--phone" href="#">
+				<p>昼キャリ</p>
+				<p>03-1111-1111</p>
+			</a>
+			<a class="contact__button contact__button--line" href="#">
+				<p><span>LINE</span>で相談する</p>
+			</a>
 		</div>
-		<nav class="header__menu" id="js-menu">
-			<ul class="header__menu-list">
-				<li class="header__menu-item">
-					<a href="#">LINK 1</a>
-				</li>
-				<li class="header__menu-item">
-					<a href="#">LINK 2</a>
-				</li>
-				<li class="header__menu-item">
-					<a href="#">LINK 3</a>
-				</li>
-				<li class="header__menu-item">
-					<a href="#">LINK 4</a>
-				</li>
-			</ul>
-			<div class="header__menu-buttons">
-				<a class="contact__button contact__button--phone" href="#">
-					<p>昼キャリ</p>
-					<p>03-1111-1111</p>
-				</a>
-				<a class="contact__button contact__button--line" href="#">
-					<p><span>LINE</span>で相談する</p>
-				</a>
-			</div>
-		</nav>
-	</header>
+	</nav>
+</header>
+
 	<main class="l-index">
 		<div class="hero" id="js-hero">
 			<div class="hero__overlay"></div>
@@ -87,7 +88,7 @@
 		</section>
 		<section class="l-index__info">
 			<div class="l-container">
-				<div class="info js-fadein">
+				<div class="info js-fadein" id="js-info-section">
 	<h2 class="section-title js-draw-from-right">
 		<div class="u-show-pc">
 			<span><p>昼キャリは夜職経験者に特化!!</p></span>
@@ -117,7 +118,7 @@
 		</li>
 	</ul>
 </div>
-				<div class="staff js-fadein">
+				<div class="staff js-fadein" id="js-staff-section">
 	<h2 class="section-title js-draw-from-right">
 		<span><p>スタッフ</p></span>
 	</h2>
@@ -302,7 +303,7 @@
 		</section>
 		<section class="l-index__testimonies">
 			<div class="l-container">
-				<div class="testimonies js-fadein">
+				<div class="testimonies js-fadein" id="js-testimonies-section">
 	<h2 class="section-title js-draw-from-right">
 		<span><p>夜職卒業生の声</p></span>
 	</h2>
@@ -329,7 +330,7 @@
 </div>
 			</div>
 		</section>
-		<aside class="l-index__contact">
+		<aside class="l-index__contact l-index__contact--bottom">
 			<div class="l-container">
 				<div class="contact js-fadein" data-offset="50">
 	<p class="contact__description">昼キャリのエージェントへの相談は無料です。<br>どうぞお気軽にお問い合わせください。</p>
@@ -344,6 +345,10 @@
 			</div>
 		</aside>
 	</main>
+	
+	<footer class="footer">
+		<a class="footer__link js-scroll" href="#js-top"></a>
+	</footer>
 	<script type="text/javascript" src="public/js/app.js"></script>
 </body>
 </html>
