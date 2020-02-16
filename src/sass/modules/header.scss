@@ -1,3 +1,29 @@
+.header {
+    position: relative;
+}
+
+.header__logo {
+    position: absolute;
+    z-index: 5;
+    top: 22px;
+    left: 20px;
+
+    @include max-screen($breakpoint-mobile) {
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+        width: 130px;
+
+        @include max-screen($breakpoint-mobile) {
+            width: 83px;
+        }
+    }
+}
+
 .header__hamburger {
     position: fixed;
     z-index: 20;
@@ -88,6 +114,8 @@
     flex-wrap: wrap;
     align-items: center;
     @include max-screen($breakpoint-mobile) {
+        z-index: -1;
+
         width: 63%;
     }
 

@@ -73,6 +73,8 @@
 
     @include max-screen($breakpoint-mobile) {
         padding: 0;
+
+        letter-spacing: -.03em;
     }
 }
 

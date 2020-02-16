@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 	<title>Hiru-Cyari</title>
 	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="shortcut icon" type="image/png" href="/public/images/favicon.png"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
@@ -21,7 +22,7 @@
 				様々な職種への転職相談所
 			</p>
 		</div>
-		<section class="l-index__qna">
+		<section class="l-index__qna" id="js-qna-section">
 			<div class="l-container">
 				<%- include('partials/qna'); %>
 			</div>
@@ -38,6 +39,7 @@
 			</div>
 		</aside>
 		<section class="l-index__qualities js-fadein">
+			<div class="l-index__qualities-decors"></div>
 			<div class="l-container">
 				<%- include('partials/qualities'); %>
 			</div>

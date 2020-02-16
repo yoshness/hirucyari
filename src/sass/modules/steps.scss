@@ -37,8 +37,8 @@
     background-size: cover;
 
     @include max-screen($breakpoint-mobile) {
-        width: 79%;
-        height: 125vw;
+        width: 83%;
+        height: 126vw;
         margin: 50px auto 40px;
     }
 

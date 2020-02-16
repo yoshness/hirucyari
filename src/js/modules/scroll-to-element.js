@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 export default function scrollToElement() {
     const $trigger = $('.js-scroll');
+    let offset = $(window).width() > 768 ? 150 : 0;
 
     $trigger.on('click', (e) => {
     	e.preventDefault();
@@ -13,7 +14,7 @@ export default function scrollToElement() {
 
     	let $target = $($(e.currentTarget).attr('href'));
         if($target != '') {
-        	$('html, body').stop().animate({ scrollTop: $target.offset().top }, 1000);
+        	$('html, body').stop().animate({ scrollTop: $target.offset().top - offset }, 1000);
         }
     });
 }

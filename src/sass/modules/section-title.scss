@@ -49,10 +49,11 @@
             display: block;
 
             width: 0;
-            height: 10px;
+            height: 13px;
 
             content: '';
             transition: width $duration $easing;
+            transform: skew(-30deg);
 
             background-color: #fff229;
         }

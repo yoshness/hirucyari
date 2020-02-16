@@ -18,11 +18,10 @@
 
         width: 100%;
         height: 150px;
-        height: 150px;
 
         content: '';
 
-        background: #fff;
+        background-color: #fff;
 
         clip-path: polygon(100% 0, 0 0, 100% 60%);
         @include max-screen($breakpoint-mobile) {

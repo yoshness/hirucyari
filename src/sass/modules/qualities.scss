@@ -1,7 +1,11 @@
 .qualities {
-    padding: 70px 0 0;
+    padding-top: 190px;
 
     text-align: center;
+
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 120px;
+    }
 }
 
 .qualities__list {
@@ -167,6 +171,6 @@
     text-shadow: 2px 2px 6px $color-primary;
 
     @include max-screen($breakpoint-mobile) {
-        width: 94%;
+        width: 100%;
     }
 }
