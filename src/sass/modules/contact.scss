@@ -19,6 +19,13 @@
 
         width: auto;
     }
+
+    span {
+        font-size: 17px;
+        font-weight: bold;
+
+        color: #e31e7d;
+    }
 }
 
 .contact__button {
@@ -122,6 +129,8 @@
     color: #00b900;
 
     p {
+        font-weight: bold;
+
         position: relative;
         left: 10px;
 

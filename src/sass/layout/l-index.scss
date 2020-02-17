@@ -7,7 +7,7 @@
     background-size: contain;
 
     @include max-screen($breakpoint-mobile) {
-        padding: 80px 0 70px;
+        padding: 70px 0 100px;
 
         background-size: cover;
     }
@@ -40,7 +40,7 @@
             top: -95px;
 
             width: 100%;
-            height: 159px;
+            height: 42vw;
 
             content: '';
             transition: opacity $duration $easing;
@@ -59,10 +59,6 @@
 
     background-image: url('#{$path-image}bg-1.jpg');
     background-size: cover;
-
-    @include max-screen($breakpoint-mobile) {
-        padding: 30px 0 0;
-    };
 
     &:after {
         position: relative;
@@ -89,6 +85,20 @@
             background-color: #ece5d5;
             background-image: none;
         }
+    }
+}
+
+.l-index__info-decors {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: -120px;
+        left: 0;
+
+        width: 100%;
+        height: 269px;
+
+        background-image: url('#{$path-image}section-decor.png');
+        background-size: cover;
     }
 }
 
@@ -203,7 +213,7 @@
         border-color: transparent transparent transparent #000;
 
         @include max-screen($breakpoint-mobile) {
-            top: 51px;
+            top: 10vw;
 
             border-width: 20px 0 30px 100px;
         }
@@ -211,25 +221,56 @@
 }
 
 .l-index__consultant {
-    padding: 50px 0 80px;
+    padding: 50px 0 130px;
 
     background-image: url('#{$path-image}bg-3.png');
+    background-size: 30%;
 
     @include max-screen($breakpoint-mobile) {
-        padding: 30px 0 80px;
+        padding: 30px 0 100px;
+
+        background-size: cover;
     }
 }
 
 .l-index__steps {
     position: relative;
 
-    padding: 70px 0 70px;
+    padding: 40px 0 70px;
 
     background-image: url('#{$path-image}bg-1.jpg');
     background-size: cover;
 
     @include max-screen($breakpoint-mobile) {
-        padding: 70px 0 40px;
+        padding: 0 0 50px;
+    }
+
+    &:before {
+        position: absolute;
+        z-index: 1;
+        top: -89px;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 90px;
+
+        content: '';
+        transform: scaleY(-1);
+
+        background: linear-gradient(0deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+        url('#{$path-image}bg-1.jpg');
+        background-size: cover;
+
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        @include max-screen($breakpoint-mobile) {
+            top: -59px;
+
+            height: 60px;
+
+            background-size: initial;
+        }
     }
 }
 
@@ -251,6 +292,10 @@
 
     background-color: #f4f4f4;
 
+    @include max-screen($breakpoint-mobile) {
+        padding-top: 100px;
+    }
+
     &:after {
         position: relative;
         z-index: 2;
@@ -271,6 +316,20 @@
 
             height: 50px;
         }
+    }
+}
+
+.l-index__testimonies-decors {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: -120px;
+        left: 0;
+
+        width: 100%;
+        height: 269px;
+
+        background-image: url('#{$path-image}section-decor.png');
+        background-size: cover;
     }
 }
 

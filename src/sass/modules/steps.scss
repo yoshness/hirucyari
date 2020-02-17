@@ -37,8 +37,8 @@
     background-size: cover;
 
     @include max-screen($breakpoint-mobile) {
-        width: 83%;
-        height: 126vw;
+        width: 81%;
+        height: 127vw;
         margin: 50px auto 40px;
     }
 
@@ -66,8 +66,8 @@
             width: 44%;
 
             @include max-screen($breakpoint-mobile) {
-                top: 42vw;
-                right: 25px;
+                top: 43vw;
+                right: 28px;
             }
         }
         &:nth-child(3) {
@@ -77,7 +77,7 @@
             width: 35%;
 
             @include max-screen($breakpoint-mobile) {
-                top: 71vw;
+                top: 72vw;
                 left: 51px;
             }
         }
@@ -88,7 +88,7 @@
             width: 47%;
 
             @include max-screen($breakpoint-mobile) {
-                top: 91vw;
+                top: 92vw;
             }
         }
     }
@@ -125,6 +125,8 @@
     text-align: center;
 
     background-color: #fff;
+    background-image: url('#{$path-image}bg-6.png');
+    background-size: cover;
 
     @include max-screen($breakpoint-mobile) {
         width: 100%;
@@ -162,17 +164,19 @@
         color: #fff;
     }
 
-    &:nth-child(2) {
-        .steps__item-image {
-            @include max-screen($breakpoint-mobile) {
-                width: 55px;
-            }
-        }
-    }
-
     &:last-of-type {
         .steps__item-wrapper:after {
             display: none;
+        }
+    }
+
+    &:first-child {
+        .steps__item-image {
+            width: 45px;
+
+            @include max-screen($breakpoint-mobile) {
+                width: 48px;
+            }
         }
     }
 
@@ -180,6 +184,12 @@
         order: 3;
         @include max-screen($breakpoint-mobile) {
             order: 2;
+        }
+
+        .steps__item-image {
+            @include max-screen($breakpoint-mobile) {
+                width: 45px;
+            }
         }
     }
 
@@ -195,6 +205,10 @@
             @include max-screen($breakpoint-mobile) {
                 display: block;
             }
+        }
+
+        .steps__item-image {
+            width: 37px;
         }
     }
 
@@ -247,12 +261,13 @@
 }
 
 .steps__item-image {
-    width: 35px;
+    width: 40px;
     margin-bottom: 5px;
 }
 
 .steps__item-description {
     font-size: 18px;
+    font-weight: bold;
 
     @include max-screen($breakpoint-mobile) {
         font-size: 20px;

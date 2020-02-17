@@ -63,6 +63,21 @@
     background-size: cover;
 }
 
+.testimonies__item-details {
+    font-size: 18px;
+
+    position: absolute;
+    top: 31px;
+    left: 77px;
+
+    color: #373737;
+
+    span {
+        font-family: $font-din-alt;
+        font-size: 25px;
+    }
+}
+
 .testimonies__item-image {
     position: relative;
     z-index: 2;

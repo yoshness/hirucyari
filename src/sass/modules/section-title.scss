@@ -15,23 +15,6 @@
         background-size: 363px 172px;
     }
 
-    // STATE
-    &.is-shown {
-        span {
-            width: auto;
-
-            p {
-                transform: translateX(0);
-
-                opacity: 1;
-            }
-
-            &:after {
-                animation: drawFromRight 1.5s forwards;
-            }
-        }
-    }
-
     span {
         position: relative;
         z-index: 1;
@@ -44,23 +27,27 @@
             position: absolute;
             z-index: -1;
             right: -5px;
-            bottom: 3px;
+            bottom: 4px;
 
             display: block;
 
             width: 0;
-            height: 13px;
+            height: 12px;
 
             content: '';
             transition: width $duration $easing;
             transform: skew(-30deg);
 
             background-color: #fff229;
+
+            @include max-screen($breakpoint-mobile) {
+                bottom: 0;
+            }
         }
 
         p {
-            transition: opacity 1s $easing 1.25s,
-            transform 1s $easing 1.25s;
+            transition: opacity 1s $easing .4s,
+            transform 1s $easing .4s;
             transform: translateX(150px);
 
             opacity: 0;
@@ -69,6 +56,29 @@
         em {
             font-size: 40px;
             font-style: normal;
+        }
+    }
+
+    // MODIFIER
+    &.section-title--white {
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+    }
+
+    // STATE
+    &.is-shown {
+        span {
+            width: auto;
+
+            p {
+                transform: translateX(0);
+
+                opacity: 1;
+            }
+
+            &:after {
+                animation: drawFromRight 1.3s forwards;
+            }
         }
     }
 }
