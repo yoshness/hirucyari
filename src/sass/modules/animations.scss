@@ -1,0 +1,178 @@
+// for FadeInUp effect
+.qna,
+.l-index__qna .qna__item,
+.info,
+.l-index__info .info__item,
+.staff,
+.contact,
+.l-index__qualities,
+.l-index__qualities .qualities__item,
+.consultant,
+.l-index__consultant .consultant__content-image,
+.l-index__consultant .consultant__content-name,
+.l-index__consultant .consultant__content-description,
+.l-index__steps-decors,
+.steps,
+.l-index__steps .steps__list,
+.l-index__steps .steps__item,
+.testimonies,
+.l-index__testimonies .testimonies__item {
+    transition: opacity 1s $easing,
+    transform 1s $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+.qna {
+    transition: opacity 1s $easing,
+    transform 1s $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+.l-index__info .info__item,
+.l-index__qualities .qualities__item,
+.l-index__testimonies .testimonies__item {
+    &:nth-child(2) {
+        transition-delay: .5s;
+
+        @include max-screen($breakpoint-mobile) {
+            transition-delay: unset;
+        }
+    }
+    &:nth-child(3) {
+        transition-delay: 1s;
+
+        @include max-screen($breakpoint-mobile) {
+            transition-delay: unset;
+        }
+    }
+}
+
+.l-index__consultant .consultant__content-name,
+.l-index__consultant .consultant__content-description {
+    transition-delay: .5s;
+
+    @include max-screen($breakpoint-mobile) {
+        transition-delay: unset;
+    }
+}
+
+.l-index__steps .phone {
+    transition: opacity 1s $easing,
+    transform 1s $easing;
+    transform: translateY(50px);
+
+    opacity: 0;
+
+    &.is-active {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        .phone__dialog {
+            &:nth-child(1) {
+                animation: fadeInOnRepeat1 5s infinite 0s ease-in;
+            }
+            &:nth-child(2) {
+                animation: fadeInOnRepeat2 5s infinite .5s ease-in;
+            }
+            &:nth-child(3) {
+                animation: fadeInOnRepeat3 5s infinite 1s ease-in;
+            }
+            &:nth-child(4) {
+                animation: fadeInOnRepeat4 5s infinite 1.5s ease-in;
+            }
+        }
+    }
+}
+
+.l-index__steps .steps__list {
+    &.is-active {
+        .steps__item {
+            @include min-screen($breakpoint-mobile + 1) {
+                transform: translateY(0);
+
+                opacity: 1;
+
+                &:nth-child(2) {
+                    transition-delay: .5s;
+                }
+                &:nth-child(3) {
+                    transition-delay: 1s;
+                }
+                &:nth-child(4) {
+                    transition-delay: 1.5s;
+                }
+                &:nth-child(5) {
+                    transition-delay: 2s;
+                }
+                &:nth-child(6) {
+                    transition-delay: 2.5s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInOnRepeat1 {
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOnRepeat2 {
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOnRepeat3 {
+    20% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOnRepeat4 {
+    20% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+}

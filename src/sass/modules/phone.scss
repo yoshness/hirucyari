@@ -1,0 +1,87 @@
+.phone {
+    position: relative;
+
+    display: flex;
+
+    width: 28.5%;
+    height: 530px;
+    margin: 45px 0 0 0;
+
+    background-image: url('#{$path-image}phone-bg.png');
+    background-position: center center;
+    background-size: cover;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    @include max-screen($breakpoint-mobile) {
+        width: 84%;
+        height: 132vw;
+        margin: 50px auto 40px;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.phone__dialog {
+    position: absolute;
+
+    transition: opacity 1s $easing,
+    transform 1s $easing;
+
+    opacity: 0;
+    background-position: center center;
+    background-size: contain;
+
+    // MODIFIERS
+    &.phone__dialog--1 {
+        top: 85px;
+
+        width: 196px;
+        height: 73px;
+
+        background-image: url('#{$path-image}phone-1.png');
+
+        @include max-screen($breakpoint-mobile) {
+            top: 21vw;
+        }
+    }
+
+    &.phone__dialog--2 {
+        top: 168px;
+
+        width: 233px;
+        height: 100px;
+
+        background-image: url('#{$path-image}phone-2.png');
+
+        @include max-screen($breakpoint-mobile) {
+            top: 41vw;
+        }
+    }
+
+    &.phone__dialog--3 {
+        top: 282px;
+
+        width: 200px;
+        height: 73px;
+
+        background-image: url('#{$path-image}phone-3.png');
+
+        @include max-screen($breakpoint-mobile) {
+            top: 70vw;
+        }
+    }
+    &.phone__dialog--4 {
+        top: 368px;
+
+        width: 231px;
+        height: 81px;
+
+        background-image: url('#{$path-image}phone-4.png');
+
+        @include max-screen($breakpoint-mobile) {
+            top: 90vw;
+        }
+    }
+}

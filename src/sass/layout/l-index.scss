@@ -227,7 +227,7 @@
     background-size: 30%;
 
     @include max-screen($breakpoint-mobile) {
-        padding: 30px 0 100px;
+        padding: 0 0 100px;
 
         background-size: cover;
     }
@@ -285,6 +285,20 @@
     background-color: rgba(0, 0, 0, .3);
 }
 
+.l-index__steps-decors {
+    @include max-screen($breakpoint-mobile) {
+        position: absolute;
+        top: 300px;
+        left: 0;
+
+        width: 100%;
+        height: 55vw;
+
+        background-image: url('#{$path-image}steps-decor.png');
+        background-size: cover;
+    }
+}
+
 .l-index__testimonies {
     position: relative;
 
@@ -330,74 +344,5 @@
 
         background-image: url('#{$path-image}section-decor.png');
         background-size: cover;
-    }
-}
-
-
-// for FadeInUp effect
-.qna,
-.l-index__info .info__item,
-.info,
-.staff,
-.contact,
-.l-index__qualities,
-.l-index__qualities .qualities__item,
-.consultant,
-.l-index__consultant .consultant__content-image,
-.l-index__consultant .consultant__content-name,
-.l-index__consultant .consultant__content-description,
-.steps,
-.l-index__steps .steps__phone,
-.l-index__steps .steps__list,
-.testimonies,
-.l-index__testimonies .testimonies__item {
-    transition: opacity 1s $easing,
-    transform 1s $easing;
-    transform: translateY(50px);
-
-    opacity: 0;
-
-    &.is-active {
-        transform: translateY(0);
-
-        opacity: 1;
-    }
-}
-
-.l-index__info .info__item,
-.l-index__qualities .qualities__item,
-.l-index__testimonies .testimonies__item {
-    &:nth-child(2) {
-        transition-delay: .5s;
-
-        @include max-screen($breakpoint-mobile) {
-            transition-delay: unset;
-        }
-    }
-    &:nth-child(3) {
-        transition-delay: 1s;
-
-        @include max-screen($breakpoint-mobile) {
-            transition-delay: unset;
-        }
-    }
-}
-
-.l-index__consultant .consultant__content-name,
-.l-index__consultant .consultant__content-description,
-.l-index__steps .steps__phone {
-    transition-delay: .5s;
-
-    @include max-screen($breakpoint-mobile) {
-        transition-delay: unset;
-    }
-}
-
-
-.l-index__steps .steps__list {
-    transition-delay: 1s;
-
-    @include max-screen($breakpoint-mobile) {
-        transition-delay: unset;
     }
 }

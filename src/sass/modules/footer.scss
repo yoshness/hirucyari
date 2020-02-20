@@ -45,7 +45,7 @@
     transition: background-color $duration $easing;
 
     background-color: #fff;
-    box-shadow: 0 3px 6px #000;
+    box-shadow: 0 2px 4px #999;
 
     @include max-screen($breakpoint-mobile) {
         top: 50px;

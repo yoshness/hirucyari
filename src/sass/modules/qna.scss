@@ -90,7 +90,7 @@
             }
 
             &:after {
-                animation: drawFromRight 1.5s forwards;
+                animation: drawFromRight 1.3s forwards;
             }
         }
     }
@@ -125,8 +125,8 @@
         }
 
         p {
-            transition: opacity 1s $easing 1.25s,
-            transform 1s $easing 1.25s;
+            transition: opacity 1s $easing .4s,
+            transform 1s $easing .4s;
             transform: translateX(150px);
 
             opacity: 0;
