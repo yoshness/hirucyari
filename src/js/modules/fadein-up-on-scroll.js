@@ -24,7 +24,7 @@ export default function fadeinUpOnScroll() {
 
             if( bottom_of_window > top_of_object ){
                 $(target).addClass('is-active');
-                $(target).find('.js-draw-from-right').addClass('is-shown');
+                $(target).find('.js-draw-from-right').first().addClass('is-shown');
             }
         }); 
     });
