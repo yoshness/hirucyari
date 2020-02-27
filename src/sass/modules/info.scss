@@ -39,17 +39,17 @@
 
     @include max-screen($breakpoint-mobile) {
         width: 100%;
-        margin-bottom: 150px;
+        margin-bottom: 125px;
     }
 
     &:before {
         @include max-screen($breakpoint-mobile) {
             position: absolute;
-            top: 35px;
-            left: -45px;
+            top: 23px;
+            left: -26px;
 
             width: 123vw;
-            height: 225px;
+            height: 218px;
 
             content: '';
             transform: rotate(-11deg);
@@ -78,7 +78,7 @@
 
         &:before {
             @include max-screen($breakpoint-mobile) {
-                top: 28px;
+                top: 40px;
 
                 height: 215px;
 
@@ -109,9 +109,9 @@
     &:nth-of-type(3) {
         &:before {
             @include max-screen($breakpoint-mobile) {
-                top: 31px;
+                top: 23px;
 
-                height: 228px;
+                height: 218px;
             }
         }
 
@@ -143,6 +143,7 @@
 
     height: 240px;
 
+    background-position: center;
     background-size: cover;
 
     @include max-screen($breakpoint-mobile) {
@@ -164,6 +165,8 @@
         position: absolute;
         top: 225px;
         left: 22%;
+
+        margin-top: 5px;
     }
 
     &:first-letter {
@@ -187,7 +190,7 @@
         line-height: 1.6;
 
         position: absolute;
-        top: 310px;
+        top: 300px;
         left: 26%;
 
         width: 65%;

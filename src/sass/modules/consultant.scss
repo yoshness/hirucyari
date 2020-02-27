@@ -10,8 +10,7 @@
     display: flex;
 
     margin-top: 40px;
-    padding: 80px;
-    padding: 80px;
+    padding: 80px 80px 60px;
 
     background-color: #dcd0c0;
 
@@ -19,40 +18,53 @@
     @include max-screen($breakpoint-mobile) {
         font-size: 17px;
 
-        padding: 20px 20px 40px;
+        padding: 20px;
     }
 }
 
 .consultant__content-image {
-    height: 320px;
+    width: 38%;
+    height: 330px;
 
     border-radius: 10px;
 
-    object-fit: none;
+    object-fit: cover;
     @include max-screen($breakpoint-mobile) {
         width: 100%;
-        height: 231px;
+        height: 290px;
+
+        object-position: 20%;
     }
 }
 
 .consultant__content-name {
+    font-size: 22px;
+    font-weight: bold;
+
     position: relative;
-    top: 50px;
-    right: 0;
+    top: 6px;
+    right: 10px;
 
-    width: 50%;
-    height: auto;
+    width: 0;
+    height: 330px;
 
+    text-shadow: -1px 1px rgba(255,255,255,.8);
+
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     @include max-screen($breakpoint-mobile) {
+        font-size: 21px;
+
         position: absolute;
-        top: 25px;
-        right: 35px;
+        top: 45px;
+        right: 20px;
+
+        display: flex;
 
         width: auto;
-        height: 230px;
+        height: 260px;
 
-        writing-mode: vertical-lr;
-        text-orientation: upright;
+        flex-wrap: wrap;
     }
 
     span {
@@ -60,22 +72,65 @@
 
         @include max-screen($breakpoint-mobile) {
             position: relative;
-            top: -25px;
+            top: 0;
+
+            &:first-of-type {
+                top: 20px;
+            }
+
+            &:nth-of-type(2) {
+                top: 40px;
+            }
+
+            &:nth-of-type(3) {
+                top: 60px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            position: relative;
+            top: 40px;
         }
     }
 }
 
 .consultant__content-description {
-    position: absolute;
-    top: 215px;
-    right: 120px;
+    font-size: 17px;
 
-    width: 40%;
-    margin-top: 25px;
+    position: relative;
+    top: 30px;
+    left: 35px;
+
+    width: 58%;
+
+    text-align: left;
 
     @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+
         position: static;
+        top: 0;
 
         width: auto;
+        margin-top: 25px;
+    }
+}
+
+.consultant__content-description-toggle {
+    display: none;
+
+    @include max-screen($breakpoint-mobile) {
+        font-size: 16px;
+
+        display: block;
+        float: right;
+
+        padding-bottom: 2px;
+
+        cursor: pointer;
+        transition: color $duration $easing;
+
+        color: $color-primary;
+        border-bottom: 1px solid $color-primary;
     }
 }

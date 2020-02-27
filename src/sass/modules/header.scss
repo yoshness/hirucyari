@@ -191,8 +191,10 @@
             padding: 10px 0;
 
             p {
+                top: -4px;
+
                 &:before {
-                    top: -5px;
+                    top: -2px;
                     left: -40px;
 
                     width: 26px;

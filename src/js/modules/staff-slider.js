@@ -6,7 +6,6 @@ export default function staffSlider() {
 		arrows: false,
 		infinite: true,
 		speed: 1000,
-		cssEase: 'cubic-bezier(.7, 0, .6, 1)',
 		slidesToShow: 3,
     	slidesToScroll: 1,
   		responsive: [
