@@ -51,12 +51,14 @@
     left: 10%;
 
     @include max-screen($breakpoint-mobile) {
-        font-size: 30px;
+        font-size: 23px;
 
         top: 255px;
-        left: 5%;
+        left: 0;
 
         width: 100%;
+
+        text-align: center;
     }
 }
 
@@ -66,28 +68,35 @@
     font-weight: 100;
 
     position: absolute;
-    top: 36%;
+    top: 37%;
     left: 13%;
+    width: 100%;
 
     transition: opacity .5s $easing,
     transform .5s $easing;
-    transform: matrix(.99, -.16, .16, .99, 0, 0) translateX(-100px);
+    transform: translateX(-100px);
 
     opacity: 0;
 
     @include max-screen($breakpoint-mobile) {
-        font-size: 80px;
+        font-size: 50px;
 
-        top: 260px;
-        left: 10px;
+        top: 305px;
+        left: 0;
+        text-align: center;
+        line-height: 1.2;
     }
 
     &:first-letter {
         font-size: 120px;
+
+        @include max-screen($breakpoint-mobile) {
+            font-size: 70px;
+        }
     }
 
     &.is-shown {
-        transform: matrix(.99, -.16, .16, .99, 0, 0) translateX(0);
+        transform: translateX(0);
 
         opacity: 1;
     }
@@ -97,13 +106,14 @@
     font-size: 25px;
 
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 17%;
+    text-align: center;
 
     @include max-screen($breakpoint-mobile) {
         font-size: initial;
 
-        top: 430px;
+        top: 470px;
         left: auto;
 
         width: 100%;

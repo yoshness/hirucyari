@@ -16,7 +16,7 @@
     @include max-screen($breakpoint-mobile) {
         width: 84%;
         height: 132vw;
-        margin: 50px auto 40px;
+        margin: 80px auto 40px;
 
         background-repeat: no-repeat;
         background-size: contain;
@@ -35,7 +35,7 @@
 
     // MODIFIERS
     &.phone__dialog--1 {
-        top: 85px;
+        top: 80px;
 
         width: 196px;
         height: 73px;
@@ -43,45 +43,45 @@
         background-image: url('#{$path-image}phone-1.png');
 
         @include max-screen($breakpoint-mobile) {
-            top: 21vw;
+            top: 19vw;
         }
     }
 
     &.phone__dialog--2 {
-        top: 168px;
+        top: 160px;
 
-        width: 233px;
-        height: 100px;
+        width: 232px;
+        height: 83px;
 
         background-image: url('#{$path-image}phone-2.png');
 
         @include max-screen($breakpoint-mobile) {
-            top: 41vw;
+            top: 39vw;
         }
     }
 
     &.phone__dialog--3 {
-        top: 282px;
+        top: 255px;
 
-        width: 200px;
-        height: 73px;
+        width: 199px;
+        height: 86px;
 
         background-image: url('#{$path-image}phone-3.png');
 
         @include max-screen($breakpoint-mobile) {
-            top: 70vw;
+            top: 63vw;
         }
     }
     &.phone__dialog--4 {
-        top: 368px;
+        top: 355px;
 
-        width: 231px;
-        height: 81px;
+        width: 228px;
+        height: 96px;
 
         background-image: url('#{$path-image}phone-4.png');
 
         @include max-screen($breakpoint-mobile) {
-            top: 90vw;
+            top: 88vw;
         }
     }
 }

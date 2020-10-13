@@ -149,8 +149,6 @@
     position: relative;
 
     @include max-screen($breakpoint-mobile) {
-        margin-bottom: -50px;
-
         background-image: url('#{$path-image}bg-5.png');
         background-size: cover;
     }

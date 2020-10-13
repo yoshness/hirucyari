@@ -147,6 +147,10 @@
 
         color: #fff;
 
+        @include max-screen($breakpoint-mobile) {
+            font-size: 15px;
+        }
+
         &:hover {
             opacity: .8;
         }

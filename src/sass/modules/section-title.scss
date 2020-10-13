@@ -64,6 +64,11 @@
         color: #fff;
         text-shadow: 1px 1px 2px #888;
     }
+    &.section-title--qualities {
+        @include max-screen($breakpoint-mobile) {
+            font-size: 26px;
+        }
+    }
 
     // STATE
     &.is-shown {

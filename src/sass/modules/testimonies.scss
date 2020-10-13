@@ -51,10 +51,8 @@
     }
 
     @include max-screen($breakpoint-mobile) {
-        &:first-child, &:nth-child(2) {
-            &:before, .testimonies__item-overlay {
-                height: 215px;
-            }
+        &:before, .testimonies__item-overlay {
+            height: 215px;
         }
     }
 }
