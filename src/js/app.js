@@ -1,3 +1,7 @@
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+
 import heroAnimation from './modules/hero-animation';
 import fadeinUpOnScroll from './modules/fadein-up-on-scroll';
 import toggleMenu from './modules/toggle-menu';

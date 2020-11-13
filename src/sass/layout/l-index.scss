@@ -82,7 +82,7 @@
 
             height: 45px;
 
-            background-color: #ece5d5;
+            background-color: #E9ECF3;
             background-image: none;
         }
     }
@@ -185,7 +185,7 @@
 
         border-width: 0 280vw 350px 0;
         border-style: solid;
-        border-color: transparent #c0b283 transparent transparent;
+        border-color: transparent $color-primary transparent transparent;
 
         @include max-screen($breakpoint-mobile) {
             left: -300px;

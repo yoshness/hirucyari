@@ -24,7 +24,7 @@
         font-size: 17px;
         font-weight: bold;
 
-        color: #e31e7d;
+        color: $color-secondary;
 
         @include max-screen($breakpoint-mobile) {
             font-size: 16px;

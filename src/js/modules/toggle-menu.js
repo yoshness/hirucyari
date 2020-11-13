@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default function toggleMenu() {
     const $toggle = $('#js-toggle-menu'),
           $menu = $('#js-menu');

@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default function readMore() {
     const $trigger = $('.js-read-more'),
           $target = $trigger.data('target');

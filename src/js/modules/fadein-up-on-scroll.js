@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default function fadeinUpOnScroll() {
     const BREAKPOINT_MOBILE = 768;
     // fade-in-up on scroll

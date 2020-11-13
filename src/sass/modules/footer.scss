@@ -30,6 +30,20 @@
             clip-path: polygon(100% 0, 0 0, 100% 25%);
         }
     }
+
+    small {
+        position: relative;
+        top: -25px;
+
+        display: block;
+
+        text-align: center;
+        font-size: 85%;
+
+        @include max-screen($breakpoint-mobile) {
+            top: -90px;
+        }
+    }
 }
 
 .footer__link {

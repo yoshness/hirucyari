@@ -12,7 +12,8 @@ $base-background-color: #fff;
 $site-size: 1200px + 60;
 
 // colors
-$color-primary: #c1ab05;
+$color-primary: #4670ce; // dark blue
+$color-secondary: #298cff; // lighter blue
 
 // easing / animation
 $duration: .25s;
@@ -23,9 +24,9 @@ $delay: .35s;
 $breakpoint-mobile: 767px;
 
 // development
-$path-assets: "/public";
+// $path-assets: "/public";
 // production
-// $path-assets: "/lp/001/public";
+$path-assets: "/lp/tensyoku/public";
 
 $path-image: "#{$path-assets}/images/";
 $path-font: "#{$path-assets}/fonts";

@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default function heroAnimation() {
     const IS_SHOWN = 'is-shown',
           $heroWrapper = $('#js-hero'),

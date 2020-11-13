@@ -38,7 +38,7 @@
             transition: width $duration $easing;
             transform: skew(-30deg);
 
-            background-color: #fff229;
+            background-color: $color-secondary;
 
             @include max-screen($breakpoint-mobile) {
                 bottom: 0;

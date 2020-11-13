@@ -16,10 +16,10 @@
     }
 
     img {
-        width: 130px;
+        width: 115px;
 
         @include max-screen($breakpoint-mobile) {
-            width: 83px;
+            width: 90px;
         }
     }
 }
@@ -109,7 +109,7 @@
     transition: opacity $duration $easing;
 
     opacity: 0;
-    background-color: #bbae80;
+    background-color: $color-primary;
 
     flex-wrap: wrap;
     align-items: center;
@@ -138,7 +138,7 @@
     margin-bottom: 10px;
     padding: 0 0 5px 10px;
 
-    border-bottom: 2px solid #cec5a4;
+    border-bottom: 2px solid #e3e9ef;
 
     a {
         display: block;

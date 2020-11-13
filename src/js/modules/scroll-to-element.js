@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export default function scrollToElement() {
     const $trigger = $('.js-scroll');
     let offset = $(window).width() > 768 ? 150 : 0;

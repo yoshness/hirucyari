@@ -1,11 +1,11 @@
 .hero {
     position: relative;
 
+    opacity: 0;
     height: 100vh;
 
     transition: opacity .5s $easing;
 
-    opacity: 0;
     color: #fff;
     background-image: url('#{$path-image}hero-pc.jpg');
     background-size: cover;
@@ -42,18 +42,32 @@
     }
 }
 
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+
+    transform: translateY(-50%);
+
+    @include max-screen($breakpoint-mobile) {
+        top: 65%;
+        left: 50%;
+
+        width: 100%;
+
+        transform: translate(-50%, -50%);
+    }
+}
+
 .hero__tagline {
     font-family: $font-851;
-    font-size: 48px;
-
-    position: absolute;
-    top: 20%;
-    left: 10%;
+    font-size: 45px;
 
     @include max-screen($breakpoint-mobile) {
         font-size: 23px;
 
         top: 255px;
+        right: auto;
         left: 0;
 
         width: 100%;
@@ -66,11 +80,13 @@
     font-family: $font-851;
     font-size: 110px;
     font-weight: 100;
+    line-height: 1.2;
 
-    position: absolute;
-    top: 37%;
-    left: 13%;
+    // position: absolute;
+    // top: 37%;
+
     width: 100%;
+    margin-top: 20px;
 
     transition: opacity .5s $easing,
     transform .5s $easing;
@@ -80,18 +96,18 @@
 
     @include max-screen($breakpoint-mobile) {
         font-size: 50px;
-
-        top: 305px;
-        left: 0;
-        text-align: center;
         line-height: 1.2;
+
+        text-align: center;
     }
 
-    &:first-letter {
-        font-size: 120px;
+    span {
+        &:first-child {
+            font-size: 120px;
 
-        @include max-screen($breakpoint-mobile) {
-            font-size: 70px;
+            @include max-screen($breakpoint-mobile) {
+                font-size: 70px;
+            }
         }
     }
 
@@ -105,10 +121,8 @@
 .hero__description {
     font-size: 25px;
 
-    position: absolute;
-    bottom: 15%;
-    left: 17%;
-    text-align: center;
+    width: 90%;
+    margin-top: 25px;
 
     @include max-screen($breakpoint-mobile) {
         font-size: initial;
